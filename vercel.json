@@ -3,18 +3,12 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/api/index.js",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Cache-Control": "s-maxage=60, stale-while-revalidate=30"
-      }
+      "dest": "/api/index.js"
     }
   ],
   "functions": {
     "api/*.js": {
-      "runtime": "nodejs18.x",
+      "runtime": "nodejs20.x",
       "memory": 1024,
       "maxDuration": 10
     }
