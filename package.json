@@ -2,11 +2,10 @@
   "name": "finance-api",
   "version": "1.0.0",
   "type": "module",
-  "main": "api/index.js",
   "dependencies": {
     "yahoo-finance2": "^2.11.3"
   },
   "engines": {
-    "node": "20.x" 
+    "node": "20.x"
   }
 }
