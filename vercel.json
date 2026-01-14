@@ -1,3 +1,22 @@
 {
-  "rewrites": [{ "source": "/", "destination": "/api/monitor" }]
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Cache-Control": "s-maxage=60, stale-while-revalidate=30"
+      }
+    }
+  ],
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs18.x",
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
 }
